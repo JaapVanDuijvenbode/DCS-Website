@@ -312,8 +312,8 @@
       if (!name || !company || !message) { err.hidden = false; return; }
       err.hidden = true;
       var subject = 'Introduction: ' + company;
-      var body = 'Hello Jaap,\n\nI am ' + name + ' from ' + company + ', ' + client + '.\n\n' + message + '\n';
-      window.location.href = 'mailto:jaap@dutchcloudsolutions.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      var body = 'Hello,\n\nI am ' + name + ' from ' + company + ', ' + client + '.\n\n' + message + '\n';
+      window.location.href = 'mailto:info@dutchcloudsolutions.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     });
   }
 })();
