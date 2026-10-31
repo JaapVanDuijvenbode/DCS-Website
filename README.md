@@ -64,6 +64,8 @@ ffmpeg -ss 3 -i assets/video/hero-loop.mp4 -frames:v 1 -q:v 4 assets/video/hero-
 
 **Add a section.** Copy an existing `<section class="section">` block, give it an `id`, and add a link to the header nav (`.primary-nav ul`) and the footer nav. Add `class="reveal"` to elements that should fade in on scroll.
 
+**Founder photo.** Replace `assets/img/founder-jaap.jpg` and `founder-jaap.webp` (portrait, about 850 x 950 px, under 100 KB each). Keep the width and height attributes in `index.html` in step with the new image.
+
 **Company details.** The footer carries the legal name, KvK number, VAT ID and contact email; the same details are in the JSON-LD block in the `<head>`. Update both together.
 
 **Colors and type.** All colors come from the tokens at the top of `styles.css`, with separate light and dark values. Change a token, not an individual rule.
@@ -81,7 +83,6 @@ The hosting provider pulls this repository into the web root. Nothing needs buil
 - [ ] YouTube video ID (`data-youtube-id`)
 - [ ] Final hero footage (the current loop is a generated placeholder in brand colors: a polder grid at dusk with data pulses)
 - [ ] Confirm the production domain
-- [ ] Optional: founder photo in the About section
 
 ## Content rules
 

@@ -504,14 +504,27 @@ strong { font-weight: 600; }
 @media (max-width: 600px) { .fact-grid { grid-template-columns: 1fr; } }
 
 /* ---------- About ---------- */
-.about-grid { display: grid; grid-template-columns: 7fr 5fr; gap: var(--space-12); align-items: start; }
+.about-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); grid-template-rows: auto 1fr; gap: var(--space-8) var(--space-12); align-items: start; }
+.about-grid .stat-grid { grid-column: 2; align-self: end; }
+.founder { margin: 0; grid-row: 1 / span 2; }
+.founder-frame { position: relative; border-radius: var(--radius-xl); overflow: hidden; background: var(--surface-raised); border: 1px solid var(--border); box-shadow: var(--shadow-md); }
+.founder-frame img { width: 100%; height: auto; aspect-ratio: 853 / 957; object-fit: cover; transform: scale(1.04); transition: transform 1.2s var(--ease-out); }
+.founder.is-visible .founder-frame img { transform: none; }
+.founder-frame .tier-stripe { position: absolute; left: 0; right: 0; bottom: 0; }
+.founder figcaption { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: var(--space-2); margin-top: var(--space-4); }
+.founder-name { font-weight: 600; font-size: 17px; line-height: 24px; }
 .about-copy > p + p { margin-top: var(--space-4); color: var(--ink-muted); }
 .about-copy .lead { color: var(--ink); }
 .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); }
 .stat { padding: var(--space-6); border-radius: var(--radius-lg); background: var(--surface-raised); border: 1px solid var(--border); }
 .stat-figure { font: 600 40px/44px var(--font-sans); letter-spacing: -0.02em; font-variation-settings: 'opsz' 32; font-variant-numeric: tabular-nums; }
 .stat-label { margin-top: var(--space-2); font-size: 14px; line-height: 20px; color: var(--ink-muted); }
-@media (max-width: 900px) { .about-grid { grid-template-columns: 1fr; } }
+@media (max-width: 900px) {
+  .about-grid { grid-template-columns: minmax(0, 1fr); }
+  .about-grid { grid-template-rows: none; }
+  .founder { max-width: 420px; grid-row: auto; }
+  .about-grid .stat-grid { grid-column: 1; }
+}
 
 /* ---------- Contact ---------- */
 .contact { display: grid; grid-template-columns: 5fr 7fr; gap: var(--space-12); align-items: start; }
