@@ -1,0 +1,13 @@
+{
+  "name": "Dutch Cloud Solutions",
+  "short_name": "Dutch Cloud Solutions",
+  "description": "Cloud go-to-market for ISVs. Vendor assessment for the enterprise.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#07182B",
+  "theme_color": "#0A2540",
+  "icons": [
+    { "src": "assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "assets/img/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
